@@ -1,15 +1,13 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 
-export default function HelpScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style="styles.title">Student Hub - Help</Text>
-      <Text style="styles.text">
-        For help with Student Hub, visit https://
-      </Text>
-    </View>
-  )
+export default function ProfileScreen({ route }) {
+    //const { recipe } = route.params;
+
+    return (
+        <View style={styles.container}>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -20,12 +18,12 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     title: {
-        fontSize: 22,
+        fontSize: 26,
         fontWeight: "bold",
-        marginBottom: 10,
+        marginBottom: 15,
     },
-    text: {
+    description: {
         fontSize: 16,
         textAlign: "center",
-    }
-})
+    },
+});

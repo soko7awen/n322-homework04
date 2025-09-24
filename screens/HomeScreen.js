@@ -1,32 +1,21 @@
-import { Button, FlatList, Pressable, View, Text, StyleSheet } from 'react-native'
-import React from 'react'
-
-const recipes = [
-    { id: "1", name: "Spaghetti Bolognese", description: "A classic italian pasta dish."},
-    { id: "2", name: "Chicken Curry", description: "A classic curry dish."},
-    { id: "3", name: "Beef Stroganoff", description: "A classic beef dish."}
-
-];
+import { Button, FlatList, Pressable, View, Text, TextInput, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
 
 export default function HomeScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.heading}>Recipes</Text>
-      <FlatList
-      data={recipes}
-      keyExtractor={(item) => item.id}
-      renderItem={({ item }) => (
-        <Pressable
-        style={styles.card}
-        onPress={() => navigation.navigate('Details', { recipe: item })}>
-            <Text style={styles.cardTitle}>{item.name}</Text>
-        </Pressable>
-        )}
-        />
+    const [userName, setUserName] = useState('');
 
-        <Button title="About This App" onPress={() => navigation.navigate("About")} />
+    return (
+    <View style={styles.container}>
+        <Text style={styles.heading}>Welcome!</Text>
+        <TextInput
+            style={styles.input}
+            placeholder="Enter your name."
+            value={userName}
+            onChangeText={text => setUserName(text)}
+        />
+        <Button title="Name Details" onPress={() => navigation.navigate("Details", { userName })} />
     </View>
-  )
+    )
 }
 
 const styles = StyleSheet.create({
