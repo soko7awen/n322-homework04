@@ -1,6 +1,6 @@
 # N322 Homework 4
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app) to showcase bottom tab navigation with React Native. Additionally this shows the passing of data from what screen to another, with useState and routing.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app) to showcase bottom tab navigation with React Native. Additionally this shows the passing of data from one screen to another, with useState and routing.
 
 ## Get started
 
